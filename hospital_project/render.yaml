@@ -10,8 +10,9 @@ services:
       - key: PORT
         value: 10000
 
-  - type: static
+  - type: web
     name: hospital-frontend
+    env: static
     rootDir: hospital-frontend
     buildCommand: npm install && npm run build
     staticPublishPath: build
